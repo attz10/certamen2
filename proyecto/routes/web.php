@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesor.index');
+//routes de profesores
+Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesores.index');
+Route::post('/profesores',[ProfesoresController::class,'store'])->name('profesores.store');
