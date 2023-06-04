@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\EstudiantesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,10 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/login',[HomeController::class,'login'])->name('home.login');
+/* Route::get('/login',[HomeController::class,'login'])->name('home.login'); */
+//routes de home
 Route::get('/',[HomeController::class,'index'])->name('home.index');
+
+//routes de estudiantes
+Route::get('/estudiantes',[EstudiantesController::class,'index'])->name('estudiantes.index');
+Route::post('/estudiantes',[EstudiantesController::class,'store'])->name('estudiantes.store');
