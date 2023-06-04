@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfesoresController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\EstudiantesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +15,19 @@ use App\Http\Controllers\ProfesoresController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+/* Route::get('/login',[HomeController::class,'login'])->name('home.login'); */
+//routes de home
+Route::get('/',[HomeController::class,'index'])->name('home.index');
+
+//routes de estudiantes
+Route::get('/estudiantes',[EstudiantesController::class,'index'])->name('estudiantes.index');
+Route::post('/estudiantes',[EstudiantesController::class,'store'])->name('estudiantes.store');
 
 //routes de profesores
 Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesores.index');
