@@ -4,14 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Propuesta extends Model
 {
     use HasFactory;
     protected $table = 'propuestas';
 
-    public function estudiante(){
-        return $this->belongTo('App\Models\Estudiante');
+    public function estudiante(): BelongsTo{
+        return $this->belongsTo('App\Models\Estudiante');
     }
 
     public function profesores_propuestas(){
