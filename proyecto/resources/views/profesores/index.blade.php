@@ -11,7 +11,7 @@
     
     <div class="row">
         <div class="container-fluid">
-            <div class="col">
+            <div class="col bg-light">
                 <h1>Profesores</h1>
             </div>
         </div>
