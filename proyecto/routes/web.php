@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EstudiantesController;
+use App\Http\Controllers\AdministradoresController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +22,13 @@ Route::get('/', function () {
 */
 
 /* Route::get('/login',[HomeController::class,'login'])->name('home.login'); */
+
 //routes de home
 Route::get('/',[HomeController::class,'index'])->name('home.index');
 
 //routes de estudiantes
 Route::get('/estudiantes',[EstudiantesController::class,'index'])->name('estudiantes.index');
 Route::post('/estudiantes',[EstudiantesController::class,'store'])->name('estudiantes.store');
+
+//routes de admin
+Route::get('/administradores',[AdministradoresController::class,'index'])->name('administradores.index');
