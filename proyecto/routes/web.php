@@ -33,6 +33,8 @@ Route::post('/estudiantes',[EstudiantesController::class,'store'])->name('estudi
 
 //routes de admin
 Route::get('/administradores',[AdministradoresController::class,'index'])->name('administradores.index');
+Route::get('/administradores/tablaprofesores',[AdministradoresController::class,'index_profesores'])->name('administradores.tablaprofesores');
+Route::get('/administradores/tablaestudiantes',[AdministradoresController::class,'index_estudiantes'])->name('administradores.tablaestudiantes');
 
 //routes de profesores
 Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesores.index');

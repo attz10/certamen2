@@ -27,9 +27,9 @@
                   Tipo de Sesion 
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Alumno</a></li>
-                  <li><a class="dropdown-item" href="#">Profesor</a></li>
-                  <li><a class="dropdown-item" href="#">Administrador</a></li>
+                  <li><a class="dropdown-item" href="{{route('estudiantes.index')}}">Alumno</a></li>
+                  <li><a class="dropdown-item" href="{{route('profesores.index')}}">Profesor</a></li>
+                  <li><a class="dropdown-item" href="{{route('administradores.index')}}">Administrador</a></li>
                 </ul>
               </li>
             </ul>
