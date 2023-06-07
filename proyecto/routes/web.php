@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfesoresController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EstudiantesController;
 use App\Http\Controllers\AdministradoresController;
+use App\Http\Controllers\PropuestasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,8 @@ Route::get('/administradores/tablaestudiantes',[AdministradoresController::class
 //routes de profesores
 Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesores.index');
 Route::post('/profesores',[ProfesoresController::class,'store'])->name('profesores.store');
+
+//routes de propuestas
+Route::get('/propuestas',[PropuestasController::class,'index'])->name('propuestas.index');
+Route::post('/propuestas',[PropuestasController::class,'store'])->name('propuestas.store');
+Route::get('/propuestas/{propuesta}', [PropuestasController::class, 'descargar'])->name('propuestas.download');
