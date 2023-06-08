@@ -42,7 +42,7 @@
                 <h3>ingreso de propuestas</h3>
             </div>
             <div class="card-body">
-                <form method="POST" action="{{route('propuestas.store')}}">
+                <form method="POST" action="{{route('propuestas.store')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label for="estudiante" class="form-label"><b>Nombre del Estudiante</b></label>

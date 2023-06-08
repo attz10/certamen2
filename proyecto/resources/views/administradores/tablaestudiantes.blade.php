@@ -11,6 +11,7 @@
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>Email</th>
+                            <th>edit</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -20,6 +21,11 @@
                             <td class="align-middle">{{$estudiante->nombre}}</td>
                             <td class="align-middle">{{$estudiante->apellido}}</td>
                             <td class="align-middle">{{$estudiante->email}}</td>
+                            <td>
+                                <a href="{{route('estudiante.edit',$estudiante->rut)}}" class="btn btn-sm btn-warning pb-0 text-white" data-bs-toggle="tooltip"
+                                data-bs-title="Editar {{$estudiante->nombre}}">editar
+                                </a>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>

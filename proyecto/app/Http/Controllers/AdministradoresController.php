@@ -21,4 +21,10 @@ class AdministradoresController extends Controller
         $estudiantes = Estudiante::all();
         return view('administradores.tablaestudiantes', compact('estudiantes'));
     }
+    public function edit_estudiante(Estudiante $estudiante){
+        return view('administradores.estudiante_edit',compact('estudiante'));
+    }
+    public function edit_profesor(Profesor $profesor){
+        return view('administradores.profesor_edit',compact('profesor'));
+    }
 }
