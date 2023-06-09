@@ -74,6 +74,12 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{{route('administradores.index')}}">Administradores</a>
             </li>
+            <li>
+              <hr class="nav-divider">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{route('propuestas.index')}}">Propuestas</a>
+            </li>
           </ul>
         
         </div>
