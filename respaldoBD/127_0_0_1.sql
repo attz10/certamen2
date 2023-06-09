@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-06-2023 a las 21:31:25
+-- Tiempo de generación: 09-06-2023 a las 03:04:01
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -43,7 +43,8 @@ CREATE TABLE `estudiantes` (
 --
 
 INSERT INTO `estudiantes` (`rut`, `nombre`, `apellido`, `email`, `created_at`, `updated_at`) VALUES
-('21107913-4', 'Atilio', 'Tudesca', 'a.tudesca.z@gmail.com', '2023-06-04 19:14:26', '2023-06-04 19:14:26');
+('21107123-5', 'Atilio', 'Tudesca', 'asdasdas@usm.cl', '2023-06-09 00:24:07', '2023-06-09 00:24:07'),
+('87667887-k', 'pedro', 'bolivar', 'ardiles@usm.cl', '2023-06-09 00:24:32', '2023-06-09 00:24:32');
 
 -- --------------------------------------------------------
 
@@ -100,6 +101,14 @@ CREATE TABLE `profesores` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `profesores`
+--
+
+INSERT INTO `profesores` (`rut`, `nombre`, `apellido`, `created_at`, `updated_at`) VALUES
+('12332123-1', 'pedro', 'sanchez', '2023-06-09 00:23:19', '2023-06-09 00:23:19'),
+('32112343-7', 'Erling', 'Haaland', '2023-06-09 00:23:38', '2023-06-09 00:23:38');
 
 -- --------------------------------------------------------
 
