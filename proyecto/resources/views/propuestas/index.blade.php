@@ -4,7 +4,7 @@
 <div class="row">
     <div class="container-fluid">
         <div class="col bg-light">
-            <h1>propuestas</h1>
+            <h1>Propuestas</h1>
         </div>
     </div>
 </div>
@@ -39,13 +39,13 @@
     <div class="col-3">
         <div class="card" style="width: 20rem">
             <div class="card-header bg-info">
-                <h3>ingreso de propuestas</h3>
+                <h3>Ingreso de Propuestas</h3>
             </div>
             <div class="card-body">
                 <form method="POST" action="{{route('propuestas.store')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
-                        <label for="estudiante" class="form-label"><b>Nombre del Estudiante</b></label>
+                        <label for="estudiante" class="form-label"><b>Datos del Estudiante</b></label>
                         <select name="estudiante" id="estudiante">
                             @foreach ($estudiantes as $estudiante)
                                 <option value="{{$estudiante->rut}}">{{$estudiante->nombre}} {{$estudiante->rut}}</option>
@@ -63,7 +63,7 @@
                         <input type="file" class="form-control" id="documento" name="documento">
                     </div>
                     <button type ="reset" class="btn btn-warning btn-outline">Cancelar</button>
-                    <button type="submit" class="btn btn-success btn-outline">Submit</button>
+                    <button type="submit" class="btn btn-success btn-outline">Subir</button>
                 </form>
             </div>
         </div>
