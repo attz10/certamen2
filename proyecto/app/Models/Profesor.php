@@ -12,6 +12,6 @@ class Profesor extends Model
     protected $table = 'profesores';
 
     public function profesores_propuestas(): HasMany{
-        return $this->hasMany('App\Models\Profesor_propuesta');
+        return $this->hasMany('App\Models\Profesor_propuesta', 'profesor_rut', 'rut');
     }
 }

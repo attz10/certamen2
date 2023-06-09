@@ -12,7 +12,7 @@ class Profesor_propuesta extends Model
     protected $table = 'profesor_propuesta';
 
     public function profesor(): BelongsTo{
-        return $this->belongsTo('App\Models\Profesor');
+        return $this->belongsTo('App\Models\Profesor', 'profesor_rut', 'rut');
     }
 
     public function propuesta(){

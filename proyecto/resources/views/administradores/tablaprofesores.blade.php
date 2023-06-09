@@ -10,6 +10,7 @@
                             <th>Rut</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
+                            <th>edit</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -17,7 +18,12 @@
                         <tr>
                             <td class="align-middle">{{$profesor->rut}}</td>
                             <td class="align-middle">{{$profesor->nombre}}</td>
-                            <td class="align-middle">{{$profesor->apellido}}</td>         
+                            <td class="align-middle">{{$profesor->apellido}}</td>     
+                            <td>
+                                <a href="{{route('profesor.edit',$profesor->rut)}}" class="btn btn-sm btn-warning pb-0 text-white" data-bs-toggle="tooltip"
+                                data-bs-title="Editar {{$profesor->nombre}}">editar
+                                </a>
+                            </td>    
                         </tr>
                         @endforeach
                     </tbody>

@@ -22,7 +22,8 @@ class AdministradoresController extends Controller
         return view('administradores.tablaestudiantes', compact('estudiantes'));
     }
     public function edit_estudiante(Estudiante $estudiante){
-        return view('administradores.estudiante_edit',compact('estudiante'));
+        $estudianteoriginal = Estudiante::find($estudiante);
+        return view('administradores.estudiante_edit',compact('estudianteoriginal'));
     }
     public function edit_profesor(Profesor $profesor){
         return view('administradores.profesor_edit',compact('profesor'));

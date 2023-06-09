@@ -31,18 +31,17 @@ Route::get('/',[HomeController::class,'index'])->name('home.index');
 //routes de estudiantes
 Route::get('/estudiantes',[EstudiantesController::class,'index'])->name('estudiantes.index');
 Route::post('/estudiantes',[EstudiantesController::class,'store'])->name('estudiantes.store');
+Route::get('/estudiantes/{estudiante}/edit',[AdministradoresController::class,'edit_estudiante'])->name('estudiante.edit');
 
 //routes de admin
 Route::get('/administradores',[AdministradoresController::class,'index'])->name('administradores.index');
 Route::get('/administradores/tablaprofesores',[AdministradoresController::class,'index_profesores'])->name('administradores.tablaprofesores');
 Route::get('/administradores/tablaestudiantes',[AdministradoresController::class,'index_estudiantes'])->name('administradores.tablaestudiantes');
-Route::get('/administradores/{profesor}/edit',[AdministradoresController::class,'edit_profesor'])->name('profesor.edit');
-Route::get('/administradores/{estudiante}/edit',[AdministradoresController::class,'edit_estudiante'])->name('estudiante.edit');
 
 //routes de profesores
 Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesores.index');
 Route::post('/profesores',[ProfesoresController::class,'store'])->name('profesores.store');
-
+Route::get('/profesores/{profesor}/edit',[AdministradoresController::class,'edit_profesor'])->name('profesor.edit');
 //routes de propuestas
 Route::get('/propuestas',[PropuestasController::class,'index'])->name('propuestas.index');
 Route::post('/propuestas',[PropuestasController::class,'store'])->name('propuestas.store');

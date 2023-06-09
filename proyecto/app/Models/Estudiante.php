@@ -12,6 +12,6 @@ class Estudiante extends Model
     protected $table = 'estudiantes';
 
     public function propuestas(): HasMany{
-        return $this->hasMany('App\Models\Propuesta');
+        return $this->hasMany('App\Models\Propuesta', 'estudiante_rut', 'rut');
     }
 }
